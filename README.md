@@ -40,40 +40,52 @@ The logic circuit given below shows a parallel-in-parallel-out shift register. T
 FIGURE-04
 A Parallel in Parallel out (PIPO) shift register is used as a temporary storage device and like SISO Shift register it acts as a delay element.
 
-### Procedure
+### Procedure:
 /* write all the steps invloved */
+1.Start the module using module ten().
 
+2.Declare the inputs clock and outputs required.
 
+3.Begin tha logic with negative edge clock.
 
-### PROGRAM 
+4.Assign differnt values for different address.
+
+5.End module.
+
+6.Generate RTL and TIMINIG DIAGRAM.
+
+### PROGRAM:
 /*
 Program for  Implementation-of Shift-registers-using-verilog-
-Developed by: 
-RegisterNumber:  
+Developed by:Akkireddy Ruchitha Reddy 
+RegisterNumber:212221230004  
 */
+module ROM_code(out, addr, CS);
+output[15:0] out;
+input[3:0] addr;
+input CS;
+reg [15:0] out;
+reg [15:0] ROM[15:0];
+always @(negedge CS)
+begin
+ROM[0]=16'h5601; ROM[1]=16'h3401;
+ROM[2]=16'h1801; ROM[3]=16'h0ac1;
+ROM[4]=16'h0521; ROM[5]=16'h0221;
+ROM[6]=16'h5601; ROM[7]=16'h5401;
+ROM[8]=16'h4801; ROM[9]=16'h3801;
+ROM[10]=16'h3001; ROM[11]=16'h2401;
+ROM[12]=16'h1c01; ROM[13]=16'h1601;
+ROM[14]=16'h5601; ROM[15]=16'h5401;
+out=ROM[addr];
+end
+endmodule
 
+### RTL LOGIC  REGISTERS: 
+![output](?raw=true)
 
+### TIMING DIGRAMS FOR SHIFT REGISTERS:
+![
+output](?raw=true)
 
-
-
-
-### RTL LOGIC  REGISTERS   
-
-
-
-
-
-
-
-
-
-### TIMING DIGRAMS FOR SHIFT REGISTERS
-
-
-
-
-
-
-
-
-### RESULTS 
+### RESULTS:
+Thus the program to design a programmable logical device is done successfully.
