@@ -42,17 +42,15 @@ A Parallel in Parallel out (PIPO) shift register is used as a temporary storage 
 
 ### Procedure:
 /* write all the steps invloved */
-1.Start the module using module ten().
+1.Use quartus software and import required modules.
 
-2.Declare the inputs clock and outputs required.
+2.Assign inputs and outputs for shift registers.
 
-3.Begin tha logic with negative edge clock.
+3.Assign logic for input to give output at positive edge.
 
-4.Assign differnt values for different address.
+4.Perform opertaions and produce rtl circuit.
 
-5.End module.
-
-6.Generate RTL and TIMINIG DIAGRAM.
+5.end module
 
 ### PROGRAM:
 ```
@@ -60,34 +58,73 @@ Program for  Implementation-of Shift-registers-using-verilog-
 Developed by:Akkireddy Ruchitha Reddy 
 RegisterNumber:212221230004  
 ```
+
+### Serial Input Parallel Output (SIPO):
 ```
-module ROM_code(out, addr, CS);
-output[15:0] out;
-input[3:0] addr;
-input CS;
-reg [15:0] out;
-reg [15:0] ROM[15:0];
-always @(negedge CS)
+module SIPO(SI,Clk,PO);
+input SI,Clk;
+output[0:7]PO;
+reg[0:7]temp;
+always@(posedge Clk)
 begin
-ROM[0]=16'h5601; ROM[1]=16'h3401;
-ROM[2]=16'h1801; ROM[3]=16'h0ac1;
-ROM[4]=16'h0521; ROM[5]=16'h0221;
-ROM[6]=16'h5601; ROM[7]=16'h5401;
-ROM[8]=16'h4801; ROM[9]=16'h3801;
-ROM[10]=16'h3001; ROM[11]=16'h2401;
-ROM[12]=16'h1c01; ROM[13]=16'h1601;
-ROM[14]=16'h5601; ROM[15]=16'h5401;
-out=ROM[addr];
+temp = {temp[0:6],SI};
 end
+assign PO = temp;
 endmodule
 ```
 
-### RTL LOGIC  REGISTERS: 
-![output](https://github.com/RuchithaReddy28/Exercise-09-Shift-registers-using-verilog-/blob/main/rom%20op.png?raw=true)
+### Parallel Input Serial Output (PISO)::
+```
+module PISO(Clk, Parallel_In,load, Serial_Out);
+input Clk,load;
+input [3:0]Parallel_In;
+output reg Serial_Out;
+reg [3:0]tmp;
+always @(posedge Clk)
+begin
+if(load)
+tmp<=Parallel_In;
+else
+begin
+Serial_Out<=tmp[3];
+tmp<={tmp[2:0],1'b0};
+end
+end
+endmodule
+```
+### Parallel Input Parallel Output (PIPO):
+```
+module PIPO(PI,Clk,PO);
+input Clk;
+input[3:0]PI;
+output reg[3:0]PO;
+always@(posedge Clk)
+begin
+PO = PI;
+end 
+endmodule
+````
+### Output:
+### Serial Input Parallel Output (SIPO):
+### RTL RTL Registers:
+![output](?raw=true)
 
-### TIMING DIGRAMS FOR SHIFT REGISTERS:
-![
-output](https://github.com/RuchithaReddy28/Exercise-09-Shift-registers-using-verilog-/blob/main/rom%20timing.png?raw=true)
+### Timing Diagram for Shift Registers:
+![output](?raw=true)
+
+### Parallel Input Serial Output (PISO):
+### RTL RTL Registers:
+![output](?raw=true)
+
+### Timing Diagram for Shift Registers:
+![output](?raw=true)
+
+### Parallel Input Parallel Output (PIPO):
+### RTL RTL Registers:
+![output](?raw=true)
+
+### Timing Diagram for Shift Registers:
+![output](?raw=true)
 
 ### RESULTS:
-Thus the program to design a programmable logical device is done successfully.
+
