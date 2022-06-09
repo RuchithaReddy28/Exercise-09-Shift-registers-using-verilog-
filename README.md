@@ -55,11 +55,12 @@ A Parallel in Parallel out (PIPO) shift register is used as a temporary storage 
 6.Generate RTL and TIMINIG DIAGRAM.
 
 ### PROGRAM:
-/*
+```
 Program for  Implementation-of Shift-registers-using-verilog-
 Developed by:Akkireddy Ruchitha Reddy 
 RegisterNumber:212221230004  
-*/
+```
+```
 module ROM_code(out, addr, CS);
 output[15:0] out;
 input[3:0] addr;
@@ -79,13 +80,14 @@ ROM[14]=16'h5601; ROM[15]=16'h5401;
 out=ROM[addr];
 end
 endmodule
+```
 
 ### RTL LOGIC  REGISTERS: 
-![output](?raw=true)
+![output](https://github.com/RuchithaReddy28/Exercise-09-Shift-registers-using-verilog-/blob/main/rom%20op.png?raw=true)
 
 ### TIMING DIGRAMS FOR SHIFT REGISTERS:
 ![
-output](?raw=true)
+output](https://github.com/RuchithaReddy28/Exercise-09-Shift-registers-using-verilog-/blob/main/rom%20timing.png?raw=true)
 
 ### RESULTS:
 Thus the program to design a programmable logical device is done successfully.
