@@ -42,6 +42,7 @@ A Parallel in Parallel out (PIPO) shift register is used as a temporary storage 
 
 ### Procedure:
 /* write all the steps invloved */
+
 1.Use quartus software and import required modules.
 
 2.Assign inputs and outputs for shift registers.
