@@ -114,17 +114,17 @@ endmodule
 
 ### Parallel Input Serial Output (PISO):
 ### RTL RTL Registers:
-![output](?raw=true)
+![output](https://github.com/RuchithaReddy28/Exercise-09-Shift-registers-using-verilog-/blob/main/1.3.jpeg?raw=true)
 
 ### Timing Diagram for Shift Registers:
-![output](?raw=true)
+![output](https://github.com/RuchithaReddy28/Exercise-09-Shift-registers-using-verilog-/blob/main/1.4.jpeg?raw=true)
 
 ### Parallel Input Parallel Output (PIPO):
 ### RTL RTL Registers:
-![output](?raw=true)
+![output](https://github.com/RuchithaReddy28/Exercise-09-Shift-registers-using-verilog-/blob/main/1.5.jpeg?raw=true)
 
 ### Timing Diagram for Shift Registers:
-![output](?raw=true)
+![output](https://github.com/RuchithaReddy28/Exercise-09-Shift-registers-using-verilog-/blob/main/1.6.jpeg?raw=true)
 
 ### RESULTS:
 Thus, PISO , PIPO, SIPO are implemented using verilog and their functionality using their functional tables is validated
