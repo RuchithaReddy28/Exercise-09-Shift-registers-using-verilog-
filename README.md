@@ -127,4 +127,5 @@ endmodule
 ![output](?raw=true)
 
 ### RESULTS:
+Thus, PISO , PIPO, SIPO are implemented using verilog and their functionality using their functional tables is validated
 
