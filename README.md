@@ -107,10 +107,10 @@ endmodule
 ### Output:
 ### Serial Input Parallel Output (SIPO):
 ### RTL RTL Registers:
-![output](?raw=true)
+![output](https://github.com/RuchithaReddy28/Exercise-09-Shift-registers-using-verilog-/blob/main/1.1.jpeg?raw=true)
 
 ### Timing Diagram for Shift Registers:
-![output](?raw=true)
+![output](https://github.com/RuchithaReddy28/Exercise-09-Shift-registers-using-verilog-/blob/main/1.2.jpeg?raw=true)
 
 ### Parallel Input Serial Output (PISO):
 ### RTL RTL Registers:
